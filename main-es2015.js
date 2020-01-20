@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"todoForm\">\n    <div>\n        <mat-form-field>\n            <input matInput formControlName=\"title\" mat-dialog-title placeholder=\"Titre\">\n        </mat-form-field>\n    </div>\n    \n    <div mat-dialog-content>\n      <mat-form-field>\n        <input formControlName=\"description\" matInput placeholder=\"Description\">\n      </mat-form-field>\n      \n    </div>\n    <div class=\"item-checkbox\">\n      <label for=\"\">Effectué : </label>\n      <mat-checkbox formControlName=\"done\"></mat-checkbox>\n    </div>\n    <div mat-dialog-actions class=\"buttons-box\">\n      <button *ngIf=\"!data\" mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"todoForm.invalid\" [mat-dialog-close]=\"todoForm.value\" cdkFocusInitial>Créer</button>\n  <button *ngIf=\"data\" mat-raised-button color=\"primary\" type=\"submit\" [disabled]=\"todoForm.invalid\" [mat-dialog-close]=\"todoForm.value\" cdkFocusInitial>Changer</button>\n  <button mat-raised-button color=\"primary\" mat-dialog-close cdkFocusInitial>Fermer</button>\n</div>\n</form>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"todoForm\">\r\n  <div>\r\n    <mat-form-field>\r\n      <input\r\n        matInput\r\n        formControlName=\"title\"\r\n        mat-dialog-title\r\n        placeholder=\"Titre\"\r\n      />\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div mat-dialog-content>\r\n    <mat-form-field>\r\n      <input formControlName=\"description\" matInput placeholder=\"Description\" />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"item-checkbox\">\r\n    <label for=\"\">Effectué : </label>\r\n    <mat-checkbox formControlName=\"done\"></mat-checkbox>\r\n  </div>\r\n  <div mat-dialog-actions class=\"buttons-box\">\r\n    <button\r\n      mat-raised-button\r\n      color=\"primary\"\r\n      type=\"submit\"\r\n      [disabled]=\"todoForm.invalid\"\r\n      [mat-dialog-close]=\"todoForm.value\"\r\n      cdkFocusInitial\r\n    >\r\n      <span *ngIf=\"data\">Changer</span>\r\n      <span *ngIf=\"!data\">Créer</span>\r\n    </button>\r\n    <button mat-raised-button color=\"primary\" mat-dialog-close cdkFocusInitial>\r\n      Fermer\r\n    </button>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<h1 class=\"gen-title\">The overkill Todo</h1>\n<button mat-raised-button color=\"primary\" (click)=\"newTodo()\" class=\"new-todo-button\">Nouvelle tâche <mat-icon>add_circle_outline</mat-icon></button>\n<div *ngFor=\"let todo of todoList\" class=\"list\">\n    <mat-card class=\"list-item\" *ngIf=\"todo\">\n        <mat-card-header class=\"list-item-title\">\n            <mat-card-title [ngClass]=\"todo.done ? 'crossed' : ''\"><a  [routerLink]=\"['/', todo.id]\">{{todo.title}}</a></mat-card-title>\n            <mat-checkbox #todoState (change)=\"changeTodoState(todo, todoState)\" [checked]=\"todo.done\"></mat-checkbox>\n        </mat-card-header>\n    </mat-card>   \n</div>\n<router-outlet></router-outlet>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"gen-title\">The overkill Todo</h1>\r\n<button\r\n  mat-raised-button\r\n  color=\"primary\"\r\n  (click)=\"newTodo()\"\r\n  class=\"new-todo-button\"\r\n>\r\n  Nouvelle tâche <mat-icon>add_circle_outline</mat-icon>\r\n</button>\r\n<div *ngFor=\"let todo of todoList\" class=\"list\">\r\n  <mat-card class=\"list-item\" *ngIf=\"todo\">\r\n    <mat-card-header class=\"list-item-title\">\r\n      <mat-card-title [ngClass]=\"todo.done ? 'crossed' : ''\"\r\n        ><a [routerLink]=\"['/', todo.id]\">{{ todo.title }}</a></mat-card-title\r\n      >\r\n      <mat-checkbox\r\n        #todoState\r\n        (change)=\"changeTodoState(todo, todoState)\"\r\n        [checked]=\"todo.done\"\r\n      ></mat-checkbox>\r\n    </mat-card-header>\r\n  </mat-card>\r\n</div>\r\n<router-outlet></router-outlet>\r\n");
 
 /***/ }),
 
@@ -326,13 +326,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: '',
+        path: "",
         component: src_app_todo_components_todo_todo_component__WEBPACK_IMPORTED_MODULE_3__["TodoComponent"],
-        children: [
-            { path: ':id', component: _todo_components_todo_detail_todo_detail_component__WEBPACK_IMPORTED_MODULE_4__["TodoDetailComponent"] }
-        ]
+        children: [{ path: ":id", component: _todo_components_todo_detail_todo_detail_component__WEBPACK_IMPORTED_MODULE_4__["TodoDetailComponent"] }]
     },
-    { path: '**', redirectTo: '' }
+    { path: "**", redirectTo: "" }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -376,12 +374,12 @@ __webpack_require__.r(__webpack_exports__);
 
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'ngrxTodoApp';
+        this.title = "ngrxTodoApp";
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-root',
+        selector: "app-root",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")).default]
     })
@@ -564,11 +562,11 @@ let TodoDetailComponent = class TodoDetailComponent {
         this.route = route;
         this.store = store;
         this.router = router;
-        this.todo$ = store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["select"])('todos'));
+        this.todo$ = store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["select"])("todos"));
     }
     ngOnInit() {
         this.route.params.subscribe(params => {
-            this.todoId = params['id'] || null;
+            this.todoId = params["id"] || null;
             this.TodoDetailSubscription = this.todo$.subscribe((state) => {
                 this.todoDetail = state.TodoList.find(el => el.id == this.todoId);
                 if (this.todoDetail) {
@@ -578,15 +576,19 @@ let TodoDetailComponent = class TodoDetailComponent {
         });
     }
     openDialog(todo) {
-        this.dialog.open(_todo_dialog_todo_dialog_component__WEBPACK_IMPORTED_MODULE_3__["TodoDialogComponent"], {
-            width: '300px',
+        this.dialog
+            .open(_todo_dialog_todo_dialog_component__WEBPACK_IMPORTED_MODULE_3__["TodoDialogComponent"], {
+            width: "300px",
             data: { todo }
-        }).afterClosed().subscribe(result => {
+        })
+            .afterClosed()
+            .subscribe(result => {
             this.TodoDetailSubscription.unsubscribe();
-            if (result && JSON.stringify(result) !== JSON.stringify(this.todoDetail)) {
+            if (result &&
+                JSON.stringify(result) !== JSON.stringify(this.todoDetail)) {
                 this.store.dispatch(_store_todo_action__WEBPACK_IMPORTED_MODULE_6__["UpdateTodo"]({ payload: result }));
             }
-            this.router.navigate(['/'], { relativeTo: this.route });
+            this.router.navigate(["/"], { relativeTo: this.route });
         });
     }
 };
@@ -598,7 +600,7 @@ TodoDetailComponent.ctorParameters = () => [
 ];
 TodoDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-todo-detail',
+        selector: "app-todo-detail",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./todo-detail.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/todo/components/todo-detail/todo-detail.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./todo-detail.component.scss */ "./src/app/todo/components/todo-detail/todo-detail.component.scss")).default]
     })
@@ -617,7 +619,7 @@ TodoDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("mat-form-field {\n  width: 100%;\n}\n\n.item-checkbox {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.buttons-box {\n  justify-content: space-between;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8tZGlhbG9nL0M6XFxVc2Vyc1xcamVyb21fMDAwXFxEb2N1bWVudHNcXGFwcHNcXGFuZ3VsYXItbmdyeC10b2RvL3NyY1xcYXBwXFx0b2RvXFxjb21wb25lbnRzXFx0b2RvLWRpYWxvZ1xcdG9kby1kaWFsb2cuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3RvZG8vY29tcG9uZW50cy90b2RvLWRpYWxvZy90b2RvLWRpYWxvZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7QUNDSjs7QURFQTtFQUNJLGFBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDQ0o7O0FERUE7RUFDSSw4QkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8tZGlhbG9nL3RvZG8tZGlhbG9nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWZvcm0tZmllbGQge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5pdGVtLWNoZWNrYm94IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcblxyXG4uYnV0dG9ucy1ib3gge1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59IiwibWF0LWZvcm0tZmllbGQge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLml0ZW0tY2hlY2tib3gge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5idXR0b25zLWJveCB7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-form-field {\n  width: 100%;\n}\n\n.item-checkbox {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.buttons-box {\n  justify-content: space-between;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8tZGlhbG9nL0M6XFxVc2Vyc1xcamVyb21fMDAwXFxEb2N1bWVudHNcXGFwcHNcXGFuZ3VsYXItbmdyeC10b2RvL3NyY1xcYXBwXFx0b2RvXFxjb21wb25lbnRzXFx0b2RvLWRpYWxvZ1xcdG9kby1kaWFsb2cuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3RvZG8vY29tcG9uZW50cy90b2RvLWRpYWxvZy90b2RvLWRpYWxvZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7QUNDRjs7QURFQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDQ0Y7O0FERUE7RUFDRSw4QkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8tZGlhbG9nL3RvZG8tZGlhbG9nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWZvcm0tZmllbGQge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uaXRlbS1jaGVja2JveCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG5cclxuLmJ1dHRvbnMtYm94IHtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbn1cclxuIiwibWF0LWZvcm0tZmllbGQge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLml0ZW0tY2hlY2tib3gge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5idXR0b25zLWJveCB7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn0iXX0= */");
 
 /***/ }),
 
@@ -672,7 +674,7 @@ TodoDialogComponent.ctorParameters = () => [
 ];
 TodoDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-todo-dialog',
+        selector: "app-todo-dialog",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./todo-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/todo/components/todo-dialog/todo-dialog.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./todo-dialog.component.scss */ "./src/app/todo/components/todo-dialog/todo-dialog.component.scss")).default]
     }),
@@ -692,7 +694,7 @@ TodoDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".new-todo-button {\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8vQzpcXFVzZXJzXFxqZXJvbV8wMDBcXERvY3VtZW50c1xcYXBwc1xcYW5ndWxhci1uZ3J4LXRvZG8vc3JjXFxhcHBcXHRvZG9cXGNvbXBvbmVudHNcXHRvZG9cXHRvZG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3RvZG8vY29tcG9uZW50cy90b2RvL3RvZG8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8vdG9kby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZXctdG9kby1idXR0b24ge1xyXG4gICAgbWFyZ2luLWxlZnQ6MTBweDtcclxufSIsIi5uZXctdG9kby1idXR0b24ge1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".new-todo-button {\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8vQzpcXFVzZXJzXFxqZXJvbV8wMDBcXERvY3VtZW50c1xcYXBwc1xcYW5ndWxhci1uZ3J4LXRvZG8vc3JjXFxhcHBcXHRvZG9cXGNvbXBvbmVudHNcXHRvZG9cXHRvZG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3RvZG8vY29tcG9uZW50cy90b2RvL3RvZG8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvdG9kby9jb21wb25lbnRzL3RvZG8vdG9kby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZXctdG9kby1idXR0b24ge1xyXG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG59XHJcbiIsIi5uZXctdG9kby1idXR0b24ge1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn0iXX0= */");
 
 /***/ }),
 
@@ -726,14 +728,15 @@ let TodoComponent = class TodoComponent {
         this.dialog = dialog;
         this.todoList = [];
         this.todoError = null;
-        this.todo$ = store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])('todos'));
+        this.todo$ = store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])("todos"));
     }
     ngOnInit() {
-        this.TodoSubscription = this.todo$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(x => {
-            x.TodoList.sort((a, b) => a && b && a.done - b.done);
-            this.todoList = (x.TodoList);
+        this.TodoSubscription = this.todo$
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(x => {
+            this.todoList = x.TodoList;
             this.todoError = x.TodoError;
-        })).subscribe();
+        }))
+            .subscribe();
         this.store.dispatch(_store_todo_action__WEBPACK_IMPORTED_MODULE_4__["GetTodos"]());
     }
     changeTodoState(todo, checkbox) {
@@ -741,9 +744,12 @@ let TodoComponent = class TodoComponent {
         this.store.dispatch(_store_todo_action__WEBPACK_IMPORTED_MODULE_4__["UpdateTodo"]({ payload: todo }));
     }
     newTodo() {
-        this.dialog.open(_todo_dialog_todo_dialog_component__WEBPACK_IMPORTED_MODULE_6__["TodoDialogComponent"], {
-            width: '300px'
-        }).afterClosed().subscribe(result => {
+        this.dialog
+            .open(_todo_dialog_todo_dialog_component__WEBPACK_IMPORTED_MODULE_6__["TodoDialogComponent"], {
+            width: "300px"
+        })
+            .afterClosed()
+            .subscribe(result => {
             if (result) {
                 result.id = this.todoList.length + 1;
                 this.store.dispatch(_store_todo_action__WEBPACK_IMPORTED_MODULE_4__["CreateTodo"]({ payload: result }));
@@ -757,7 +763,7 @@ TodoComponent.ctorParameters = () => [
 ];
 TodoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-todo',
+        selector: "app-todo",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./todo.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/todo/components/todo/todo.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./todo.component.scss */ "./src/app/todo/components/todo/todo.component.scss")).default]
     })
@@ -785,17 +791,32 @@ let DataService = class DataService {
     constructor() { }
     createDb() {
         let todos = [
-            { id: 1, title: "Faire les courses de Noël", description: "Aller à Darty plutôt qu'à la fnac", done: true },
-            { id: 2, title: "Acheter les cadeaux pour Steven", description: "Peut être un dvd", done: true },
+            {
+                id: 1,
+                title: "Faire les courses de Noël",
+                description: "Aller à Darty plutôt qu'à la fnac",
+                done: true
+            },
+            {
+                id: 2,
+                title: "Acheter les cadeaux pour Steven",
+                description: "Peut être un dvd",
+                done: true
+            },
             { id: 3, title: "Appeler Guillermo", description: "", done: false },
-            { id: 4, title: "Faire le ménage", description: "Penser à acheter du desktop", done: false }
+            {
+                id: 4,
+                title: "Faire le ménage",
+                description: "Penser à acheter du desktop",
+                done: false
+            }
         ];
         return { todos };
     }
 };
 DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root"
     })
 ], DataService);
 
@@ -832,35 +853,39 @@ let TodoService = class TodoService {
     }
     getTodos() {
         const url = `${this.SERVER_URL}/todos`;
-        return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
+        return this.http
+            .get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
     }
     updateTodo(todo) {
         const url = `${this.SERVER_URL}/todos/${todo.id}`;
-        return this.http.put(url, todo).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
+        return this.http
+            .put(url, todo)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
     }
     createTodo(todo) {
         const url = `${this.SERVER_URL}/todos`;
-        return this.http.post(url, todo).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
+        return this.http
+            .post(url, todo)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => this.handleError(error)));
     }
     handleError(error) {
         if (error.error instanceof ErrorEvent) {
-            console.error('An error occurred:', error.error.message);
+            console.error("An error occurred:", error.error.message);
         }
         else {
-            console.error(`Backend returned code ${error.status}, ` +
-                `body was: ${error.error}`);
+            console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
         }
         // return an observable with a user-facing error message
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])('Something bad happened; please try again later.');
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])("Something bad happened; please try again later.");
     }
-    ;
 };
 TodoService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
 ];
 TodoService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root"
     })
 ], TodoService);
 
@@ -889,16 +914,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Getting todo list
-const GetTodos = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Get todos');
-const SuccessGetTodos = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] Success getting todos', Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
+const GetTodos = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Get todos");
+const SuccessGetTodos = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] Success getting todos", Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
 // Update todo
-const UpdateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Update todo', Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
-const SuccessUpdateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Success updating todo');
+const UpdateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Update todo", Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
+const SuccessUpdateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Success updating todo");
 // Create todo
-const CreateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Create Todo', Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
-const SuccessCreateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Success creating todo');
+const CreateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Create Todo", Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
+const SuccessCreateTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Success creating todo");
 // Error todo
-const ErrorTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])('[Todo] - Error', Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
+const ErrorTodo = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createAction"])("[Todo] - Error", Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["props"])());
 
 
 /***/ }),
@@ -988,11 +1013,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const initialState = Object(_app_state__WEBPACK_IMPORTED_MODULE_3__["initializeState"])();
-const reducer = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(initialState, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["GetTodos"], state => state), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["SuccessGetTodos"], (state, { payload }) => {
-    return Object.assign({}, state, { TodoList: payload });
+const reducer = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(initialState, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["SuccessGetTodos"], (state, { payload }) => {
+    return Object.assign({}, state, { TodoList: sortByBooleanProp(payload, "done") });
 }), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["CreateTodo"], (state, { payload }) => {
     return Object.assign({}, state, { TodoList: [payload, ...state.TodoList], TodoError: null });
-}), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["SuccessCreateTodo"], (state) => state), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["UpdateTodo"], (state, { payload }) => {
+}), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["UpdateTodo"], (state, { payload }) => {
     const updateTodos = state.TodoList.map(el => {
         if (el.id === payload.id) {
             return payload;
@@ -1001,11 +1026,14 @@ const reducer = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createReducer"]
             return el;
         }
     });
-    return Object.assign({}, state, { TodoList: updateTodos, TodoError: null });
-}), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["SuccessUpdateTodo"], (state) => state), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["ErrorTodo"], (state, error) => {
+    return Object.assign({}, state, { TodoList: sortByBooleanProp(updateTodos, "done"), TodoError: null });
+}), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["on"])(_todo_action__WEBPACK_IMPORTED_MODULE_2__["ErrorTodo"], (state, error) => {
     console.log(error);
     return Object.assign({}, state, { TodoError: error });
 }));
+function sortByBooleanProp(payload, property) {
+    return payload.sort((a, b) => a && b && a[property] - b[property]);
+}
 function TodoReducer(state, action) {
     return reducer(state, action);
 }
@@ -1066,7 +1094,8 @@ __webpack_require__.r(__webpack_exports__);
 if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])()
+    .bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(err => console.error(err));
 
 
